@@ -3,6 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { Button } from "../component/button"
+import { Text } from "@/app/component/textlenzeet"
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("")
@@ -60,6 +62,7 @@ export default function ForgotPassword() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
       <div className="bg-white rounded-2xl shadow-lg max-w-md w-full p-8">
+        <Text>Ini halaman Reset</Text>
         <div className="text-center mb-8">
           <Image
             src="/next.svg"
@@ -94,13 +97,9 @@ export default function ForgotPassword() {
             />
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-college disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {loading ? "Mengirim..." : "Kirim Tautan Reset"}
-          </button>
+          <Button type="submit">
+            Reset kata sandi
+          </Button>
         </form>
 
         <div className="text-center mt-6">

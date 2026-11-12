@@ -3,6 +3,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { Text } from "@/app/component/textlenzeet"
+import { Button } from "../component/button"
+
 
 export default function Register() {
   const [name, setName] = useState("")
@@ -61,6 +64,7 @@ export default function Register() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-6">
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
         <div className="text-center mb-8">
+          <Text>Abhista</Text>
           <Image
             src="/next.svg"
             alt="SMK MOKLET"
@@ -139,13 +143,11 @@ export default function Register() {
             />
           </div>
 
-          <button
+          <Button
             type="submit"
-            disabled={loading}
-            className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-college disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Mendaftar..." : "Daftar"}
-          </button>
+          </Button>
         </form>
 
         <div className="text-center mt-6">

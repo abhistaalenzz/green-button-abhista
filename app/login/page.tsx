@@ -3,6 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { Text } from "@/app/component/textlenzeet"
+import { Button } from "../component/button"
 
 export default function Login() {
   const [email, setEmail] = useState("")
@@ -32,6 +34,7 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
+        <Text>Abhista</Text>
         <div className="text-center mb-8">
           <Image
             src="/next.svg"
@@ -79,14 +82,9 @@ export default function Login() {
             />
           </div>
 
-          <div className="flex items-center justify-between text-sm">
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-college disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Masuk
-            </button>
-          </div>
+          <Button type="submit">
+            Masuk
+          </Button>
 
           <div className="text-center mt-4">
             <p className="text-gray-600">
